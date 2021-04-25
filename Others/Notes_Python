@@ -1,0 +1,67 @@
+=============================== PYTHON NOTES ================================
+
+-----------------------
+1. Expected Data Types 
+- Integer : Use"d"     
+- String  : Use"s"
+- Float   : Use"f"
+-----------------------
+
+---------------------------------------
+2. How many Characters to fit
+- Enter the code as "... :45(datatype)"
+---------------------------------------
+
+----------------------------------------------------------
+3. Alignment of Data
+- "<" (Align to the left of (Characters to fit) numbers)
+- ">" (Align to the right of (Characters to fit) numbers)
+- "^" (Align to the center of (Characters to fit) numbers)
+----------------------------------------------------------
+
+----------------------------------------------------------------------------
+4. Character to pad the Additional spaces
+- "(Input)":(Character to pad)(Alignment Symbol)(Number)(Selected Data Type)
+----------------------------------------------------------------------------
+
+------------------------------------------
+5. Set Decimal Points for Float Data Types
+- '(Number):.(Number of Decimal Points)f'
+------------------------------------------
+
+-----------------------------------------------------------------------
+6. Ask user to Input
+- (variable Name) = (Expected Data type)(input('(Question/Statement)'))
+-----------------------------------------------------------------------
+
+
+7.
+
+8.
+
+9.
+
+10.
+
+11.
+
+12.
+
+13.
+
+14.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+
+
+============================================================================
