@@ -8,5 +8,11 @@ def rand_lot():
             newlist.append(add)
     return sorted(newlist)
 
-
-print(*rand_lot(), sep=' ')
+print("")
+print('===LOTTERY NUMBER WINNERS===')
+print(' ', end="")
+print(*rand_lot(), sep='   ')
+print('============================')
+print("")
+print("Did you win the Lottery?")
+print("")
