@@ -1,11 +1,11 @@
+#Ex 116 Pig Latin Improved
 from ex115 import pig_latin
 
 #reading n splitting
 inp = list(input('Enter a string:'))
 
 #Tracks Data of punctuation
-upper = None
-punc = list()
+upper, punc = None, list()
 if not inp[-1].isalpha():
     punc.append(inp[-1])
     inp.pop(-1)

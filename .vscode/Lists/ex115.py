@@ -17,3 +17,5 @@ if __name__ == '__main__':
     for i, word in enumerate(listofwords):
         listofwords[i] = pig_latin(word)
     print(' '.join(listofwords))
+
+    
