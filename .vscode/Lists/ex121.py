@@ -1,20 +1,20 @@
-def readwords():
-    ans = 'i'
-    wordlist = list()
-    while ans != '':
-        ans = input('Enter your word. Enter a blank to proceed.').lower()
-        if ans != '':
-            wordlist.append(ans)
-    return wordlist
+def countRange(max, min, numberslist):
+    numberslist = sorted(numberslist)
+    extra = list()
+    for i in range(len(numberslist)):
+        if numberslist[i] <= min:
+            extra.append(numberslist[i])
+        elif numberslist[i] >= max:
+            extra.append(numberslist[i])
+    return len(extra) - 2
 
-def list_format(listinput):
-    newlist = list()
-    for i in range(len(listinput)-2):
-        newlist.append(listinput[i])
-        newlist.append(', ')
-    newlist.append(listinput[-2])
-    newlist.append(' and ')
-    newlist.append(listinput[-1])
-    return ''.join(newlist)
+def readval():
+    numberslist, ans = list(), int(input('Enter a number. Enter 0 to proceed.'))
+    while ans != 0:
+        numberslist.append(ans)
+        ans = int(input('Enter a number. Enter 0 to proceed.'))
+    return numberslist
 
-print(list_format(readwords()))
+max = int(input('Enter maximum'))
+min = int(input('Enter minimum'))
+print(countRange(max,min,readval()))

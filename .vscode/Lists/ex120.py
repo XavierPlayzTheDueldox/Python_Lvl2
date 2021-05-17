@@ -1,19 +1,15 @@
 #Ex 120 Is a List already in Sorted Order?
-def readlist(lis):
-    return sorted(lis)
+def readval():
+    numberslist, ans = list(), int(input('Enter a number. Enter 0 to proceed.'))
+    while ans != 0:
+        numberslist.append(ans)
+        ans = int(input('Enter a number. Enter 0 to proceed.'))
+    return numberslist
 
-    if readlist(numberslist) == numberslist:
+def check(numberslist):
+    if sorted(numberslist) == numberslist:
         return True
     else:
         return False
 
-def readnow():
-    numberslist = list()
-    ans = int(input('Enter your list inputs'))
-    while ans != 0:
-        #if ans == 0:
-            #break
-        numberslist.append(ans)
-        ans = int(input('Enter your list inputs'))
-
-print(readlist(readnow()))
+print(check(readval()))

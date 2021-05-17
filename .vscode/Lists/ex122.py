@@ -1,28 +1,26 @@
-def readval():
-    numberslist = list()
-    ans=1
-    while not ans=='':
-        ans = input('Enter a number. Enter blank to proceed.')
-        if ans != '':
-            numberslist.insert(len(numberslist),int(ans))
-    return numberslist
+def tokenize(new):
+    newstr = list()
+    adder = ''
+    inp = list()
+    for i in range(len(new)):
+        if new[i] != ' ':
+            inp.append(new[i])
+    for i in range(len(inp)):
+        adder = inp[i]
+        if adder == '+' or '-':
+            if inp[i-1].isdigit():
+                adder = inp[i-1:i+2]
+                i += 1
+            if inp[i-1] == ")":
+                adder = inp[i-1:i+2]
+                i += 1
+            else:
+                adder = inp[i]
+        newstr.append(adder)
+    return newstr
 
-def negzerpos(numberslist):
-    neglist, poslist, zerlist, finallist = list(), list(), list(), list()
-    while not numberslist == list(""):
-        if numberslist[0] < 0:
-            neglist.append(numberslist[0])
-        elif numberslist[0] > 0:
-            poslist.append(numberslist[0])
-        else:
-            zerlist.append(numberslist[0])
-        numberslist = numberslist[1:len(numberslist)]
-    finallist = neglist
-    for i in range(len(zerlist)):
-        finallist.append(0)
-    while poslist != list(''):
-        finallist.append(poslist[0])
-        poslist = poslist[1: len(poslist)]
-    return finallist
+inp = input('Enter your number:')
 
-print(negzerpos(readval()))
+
+
+print(tokenize(new))
